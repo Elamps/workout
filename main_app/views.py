@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Workout
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 

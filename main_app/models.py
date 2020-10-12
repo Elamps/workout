@@ -7,4 +7,3 @@ class Workout(models.Model):
     date = models.DateField('workout date')
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
-    
