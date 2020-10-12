@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Workout
 from django.views.generic import ListView, DetailView
 
@@ -20,4 +20,11 @@ class WorkoutCreate(CreateView):
     model = Workout
     fields = '__all__'
     success_url = '/'
-    
+
+class WorkoutUpdate(UpdateView):
+    model = Workout
+    fields = ['name', 'description']
+
+class WorkoutDelete(DeleteView):
+  model = Workout
+  success_url = '/workouts/'
