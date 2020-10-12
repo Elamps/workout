@@ -2,7 +2,13 @@
 {% block content %}
 <body>
  <h1>Did you work out today?</h1>
+ {% if user.is_authenticated %}
  <li><a href="{% url 'index' %}">View All My Previous Workouts</a></li>
- <li><a href="{% url 'workouts_create' %}">Get on it and do something!</a></li>   
+ <li><a href="{% url 'workouts_create' %}">Get on it and do something!</a></li>
+   <li><a href="{% url 'logout' %}">Log Out</a></li>
+ {% else %}
+   <li><a href="{% url 'login' %}">Log In</a></li>
+ {% endif %}
+</ul>   
 </body>
 {% endblock %}
