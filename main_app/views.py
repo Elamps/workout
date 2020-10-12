@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Workout
 
 # Create your views here.
 
@@ -7,3 +8,7 @@ def home(request):
 
 def workouts_index(request):
   return render(request, 'workouts/index.html', { 'workouts': workouts })
+
+def workouts_detail(request, workout_id):
+    workout = Workout.objects.get(id=workout_id)
+    return render(request, 'workouts/detail.html', {'workout': workout})
