@@ -19,3 +19,5 @@ def workouts_detail(request, workout_id):
 class WorkoutCreate(CreateView):
     model = Workout
     fields = '__all__'
+    success_url = '/'
+    
