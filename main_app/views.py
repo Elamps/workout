@@ -21,16 +21,24 @@ def workouts_index(request):
   return render(request, 'workouts/index.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date  })
 
 @login_required
+def workouts_diwo(request):
+  workouts = Workout.objects.filter(user=request.user)
+  most_recent_workout = Workout.objects.latest('date')
+  current_date = date.today
+  return render(request, 'workouts/diwo.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date  })
+
+@login_required
 def workouts_detail(request, workout_id):
     workout = Workout.objects.get(id=workout_id)
     return render(request, 'workouts/detail.html', {'workout': workout})
 
 class WorkoutCreate(LoginRequiredMixin, CreateView):
     model = Workout
-    fields = ['name', 'description']
+    fields = ['date', 'name', 'description']
     def form_valid(self, form):
       form.instance.user = self.request.user
       return super().form_valid(form)
+      success_url = '/workouts/diwo'
 
 class WorkoutUpdate(LoginRequiredMixin, UpdateView):
     model = Workout

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Did I Work Out on {% now "M, d Y" %} ?</h1>
+
+{% if most_recent_workout.date == current_date %}
+<div class="card-panel teal-text center-align">{{user.username}} absofruitly did some {{most_recent_workout.name}} !! </div>
+{% else %}
+<div class="card-panel red-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a></div>
+{% endif %}
+
+{% endblock %}
