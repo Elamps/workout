@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>A Workout</h1>
+<h1>{{user.username}}'s {{workout.name}}</h1>
 <div class="card">
     <div class="card-content">
       <span class="card-title">{{ workout.name }}</span>
@@ -12,6 +12,7 @@
     <a href="{% url 'workouts_update' workout.id %}">Edit</a>
     <a href="{% url 'workouts_delete' workout.id %}">Delete</a>
   </div>
+    <a href="{% url 'index' %}">Return</a> 
   </div>
 
 {% endblock %}
