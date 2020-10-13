@@ -6,7 +6,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from datetime import date
 
 # Create your views here.
 
@@ -16,7 +16,9 @@ def home(request):
 @login_required
 def workouts_index(request):
   workouts = Workout.objects.filter(user=request.user)
-  return render(request, 'workouts/index.html', { 'workouts': workouts })
+  most_recent_workout = Workout.objects.latest('date')
+  current_date = date.today
+  return render(request, 'workouts/index.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date  })
 
 @login_required
 def workouts_detail(request, workout_id):
@@ -25,7 +27,7 @@ def workouts_detail(request, workout_id):
 
 class WorkoutCreate(LoginRequiredMixin, CreateView):
     model = Workout
-    fields = '__all__'
+    fields = ['name', 'description']
     def form_valid(self, form):
       form.instance.user = self.request.user
       return super().form_valid(form)
