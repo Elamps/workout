@@ -2,7 +2,13 @@
 {% block content %}
 <body>
  <h1>Did you work out today?</h1>
+ 
  {% if user.is_authenticated %}
+ {% if workout.worked_out_today %}
+ <div class="card-panel teal-text center-align">{{user.username}}absofruitly worked out!</div>
+{% else %}
+ <div class="card-panel red-text center-align">{{user.username}} {{workout}} needs to work on it!</div>
+{% endif %}
  <li><a href="{% url 'index' %}">View All My Previous Workouts</a></li>
  <li><a href="{% url 'workouts_create' %}">Get on it and do something!</a></li>
    <li><a href="{% url 'logout' %}">Log Out</a></li>

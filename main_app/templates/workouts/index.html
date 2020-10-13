@@ -4,6 +4,12 @@
 <h1>Workout List</h1>
 
 {% for workout in workouts %}
+{% if workout.worked_out_today %}
+<div class="card-panel teal-text center-align">{{user.username}} absofruitly worked out!</div>
+{% else %}
+<div class="card-panel red-text center-align">{{user.username}} needs to work on it!</div>
+{% endif %}
+
   <div class="card">
     <a href="{% url 'detail' workout.id %}"></a>  
     <div class="card-content">
@@ -11,7 +17,7 @@
       <p>When: {{ workout.date }}</p>
       <p>Description: {{ workout.description }}</p>
     </div>
-    </a>    
+   </a>    
   </div>
 {% endfor %}
 
