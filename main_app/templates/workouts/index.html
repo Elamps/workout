@@ -5,12 +5,11 @@
 <br>
 {% for workout in workouts %}
   <div class="row">
-    <div class="col s6 offset-s1">  
-      <div class="card">
+    <div class="col s6 offset-s.5">  
+      <div class="card orange lighten-3 teal-text center-align">
     <a href="{% url 'detail' workout.id %}"> 
     <div class="card-content">
-      <span class="card-title">{{ workout.name }}</span>
-      <p>When: {{ workout.date }}</p>
+      <p>On {{ workout.date }} I crushed some {{workout.name}} </p>
       <p>Description: {{ workout.description }}</p>
     </div>
   </div>
