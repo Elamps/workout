@@ -25,7 +25,8 @@ def workouts_diwo(request):
   workouts = Workout.objects.filter(user=request.user)
   most_recent_workout = Workout.objects.latest('date')
   current_date = date.today
-  return render(request, 'workouts/diwo.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date  })
+  wishlist = Workout.objects.filter(user=request.user)
+  return render(request, 'workouts/diwo.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date, "wishlist": wishlist,  })
 
 @login_required
 def workouts_detail(request, workout_id):
@@ -55,7 +56,7 @@ def signup(request):
     if form.is_valid():
       user = form.save()
       login(request, user)
-      return redirect('index')
+      return redirect('diwo')
     else:
       error_message = 'Invalid sign up - try again'
   form = UserCreationForm()
