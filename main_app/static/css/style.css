@@ -4,11 +4,20 @@ body {
     flex-direction: column;
     text-align: center;
     background: linear-gradient(rgb(168, 48, 114), purple);
+    color: seashell;
+    font-size: 35px;
+    
   }
   
   main {
     flex: 1 0 auto;
     background-color: linear-gradient(purple, pink);
+  }
+
+  .card {
+      border-radius: 15%;
+      width: 400px;
+      font-size: 40px;
   }
 
 

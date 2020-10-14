@@ -4,9 +4,19 @@
 <h1>Did I Work Out on {% now "M, d Y" %} ?</h1>
 
 {% if most_recent_workout.date == current_date %}
-<div class="card-circle teal-text center-align">{{user.username}} absofruitly did some {{most_recent_workout.name}} !! </div>
+<div class="row">
+<div class="col s6 offset-s1">
+<div class="card orange lighten-3 teal-text center-align">{{user.username}} absofruitly did some {{most_recent_workout.name}} !! 
+</div>
+</div>
+</div>
 {% else %}
-<div class="card red-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a></div>
+    <div class="row">
+    <div class="col s6 offset-s1">
+    <div class="card orange lighten-3 teal-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
+    </div>
+    </div>
+    </div>
 {% endif %}
 
 {% endblock %}
