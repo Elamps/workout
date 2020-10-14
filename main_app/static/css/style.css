@@ -2,9 +2,14 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    text-align: center;
+    background: linear-gradient(rgb(168, 48, 114), purple);
   }
   
   main {
     flex: 1 0 auto;
+    background-color: linear-gradient(purple, pink);
   }
+
+
   
