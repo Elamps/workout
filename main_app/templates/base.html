@@ -11,5 +11,11 @@
 <body>
 {% block content %}
 {% endblock %}
+{% if user.is_authenticated %}
+<footer class="boop">
+    <div class="right"><a class="btn" href="{% url 'index' %}">View All Workouts</a></div>
+  </footer>
+{% else %}
+{% endif %}
 </body>
 </html>

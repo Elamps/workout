@@ -6,7 +6,7 @@
 {% if most_recent_workout.date == current_date %}
 <div class="row">
 <div class="col s6 offset-s.5">
-<div class="card small orange lighten-3 teal-text center-align">
+<div class="card small teal-text center-align">
     <br>
     {{user.username}} absofruitly did some {{most_recent_workout.name}} !! 
 </div>
@@ -15,7 +15,7 @@
 {% else %}
     <div class="row">
     <div class="col s6 offset-s.5">
-    <div class="card orange lighten-3 teal-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
+    <div class="card teal-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
     <br>
     <br>
     <br>

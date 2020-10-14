@@ -6,7 +6,7 @@
 {% for workout in workouts %}
   <div class="row">
     <div class="col s6 offset-s.5">  
-      <div class="card orange lighten-3 teal-text center-align">
+      <div class="card teal-text center-align">
     <a href="{% url 'detail' workout.id %}"> 
     <div class="card-content">
       <p>On {{ workout.date }} I crushed some {{workout.name}} </p>
@@ -17,5 +17,7 @@
    </a>    
   </div>
 {% endfor %}
-
+<footer>
+  <div class="left"><a class="btn" href="{% url 'diwo' %}">Did I Work Out?</a></div>
+</footer>
 {% endblock %}

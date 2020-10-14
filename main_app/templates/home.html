@@ -7,8 +7,8 @@
  <li><a href="{% url 'workouts_create' %}">Get on it and do something!</a></li>
    <li><a href="{% url 'logout' %}">Log Out</a></li>
  {% else %}
-   <li><a href="{% url 'login' %}">Log In</a></li>
-   <li><a href="{% url 'signup' %}">Sign Up</a></li>
+   <a class="btn" href="{% url 'login' %}">Log In</a></li>
+   <a class="btn" href="{% url 'signup' %}">Sign Up</a></li>
  {% endif %}
 </ul>   
 {% endblock %}
