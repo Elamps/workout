@@ -18,15 +18,19 @@ def workouts_index(request):
   workouts = Workout.objects.filter(user=request.user)
   most_recent_workout = Workout.objects.latest('date')
   current_date = date.today
-  return render(request, 'workouts/index.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date  })
+  return render(request, 'workouts/index.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date })
 
 @login_required
 def workouts_diwo(request):
-  workouts = Workout.objects.filter(user=request.user)
-  most_recent_workout = Workout.objects.filter(user=request.user).latest('date')
-  current_date = date.today
-  wishlist = Workout.objects.filter(user=request.user)
-  return render(request, 'workouts/diwo.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date, "wishlist": wishlist,  })
+  if Workout.objects.filter(user=request.user).exists():
+        workouts = workouts = Workout.objects.filter(user=request.user)
+        most_recent_workout = Workout.objects.filter(user=request.user).latest('date')
+        current_date = date.today
+  else:
+        workouts = []
+        most_recent_workout = []
+        current_date = date.today
+  return render(request, 'workouts/diwo.html', { 'workouts': workouts, 'most_recent_workout': most_recent_workout, "current_date": current_date  })
 
 @login_required
 def workouts_detail(request, workout_id):
