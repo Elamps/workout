@@ -14,8 +14,9 @@
 {% else %}
     <div class="row">
     <div class="col s6 offset-s.5">
-    <div class="card seashell-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
+    <div class="card seashell-text center-align">
     <br>
+    <a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
     <br>
     <br>
     <a class="btn" value="JUST DO IT!" href="{% url 'workouts_create' %}">JUST DO IT!</a>
