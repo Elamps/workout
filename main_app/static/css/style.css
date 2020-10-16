@@ -8,6 +8,10 @@ body {
     font-size: 35px;
     
   }
+
+  a {
+    color: seashell;
+  }
   
   main {
     flex: 1 0 auto;
@@ -20,6 +24,10 @@ body {
       font-size: 40px;
       background-color: #FFBC7f;
 
+  }
+
+  .card-a {
+    color: seashell;
   }
 
   footer {

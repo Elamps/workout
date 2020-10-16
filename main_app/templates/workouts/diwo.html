@@ -1,23 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <h4>{% now "M, d Y" %}</h4>
-<h1>Did I Work Out on Today ?</h1>
-{% if wishlist|length == 0 %}
-<div class="row">
-    <div class="col s6 offset-s.5">
-    <div class="card teal-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
-    <br>
-    <br>
-    <br>
-    <a class="btn" value="JUST DO IT!" href="{% url 'workouts_create' %}">JUST DO IT!</a>
-    </div>
-    </div>
-    </div>
-    {% else %}
+<h1>Did I Work Out on Today ?</h1>  
 {% if most_recent_workout.date == current_date %}
 <div class="row">
 <div class="col s6 offset-s.5">
-<div class="card small teal-text center-align">
+<div class="card small seashell-text center-align">
     <br>
     {{user.username}} absofruitly did some {{most_recent_workout.name}} !! 
 </div>
@@ -26,7 +14,7 @@
 {% else %}
     <div class="row">
     <div class="col s6 offset-s.5">
-    <div class="card teal-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
+    <div class="card seashell-text center-align"><a href="{% url 'workouts_create' %}">{{user.username}} needs get at it!</a>
     <br>
     <br>
     <br>
@@ -34,7 +22,6 @@
     </div>
     </div>
     </div>
-{% endif %}
 {% endif %}
 
 {% endblock %}

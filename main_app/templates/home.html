@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
- <h1><a href="{% url 'diwo' %}">Did you work out today?</a></h1>
+ <h1>Did you work out today?</h1>
 
  {% if user.is_authenticated %}
- <li><a href="{% url 'index' %}">View All My Previous Workouts</a></li>
- <li><a href="{% url 'workouts_create' %}">Get on it and do something!</a></li>
-   <li><a href="{% url 'logout' %}">Log Out</a></li>
+ <a href="{% url 'index' %}">View All My Previous Workouts</a>
+ <a href="{% url 'workouts_create' %}">Get on it and do something!</a>
+ <a href="{% url 'logout' %}">Log Out</a>
  {% else %}
-   <a class="btn" href="{% url 'login' %}">Log In</a></li>
-   <a class="btn" href="{% url 'signup' %}">Sign Up</a></li>
+ <br>
+ <br>
+ <br>
+   <a class="button" href="{% url 'login' %}">Log In</a>
+   <br>
+   <a class="button" href="{% url 'signup' %}">Sign Up</a>
  {% endif %}
 </ul>   
 {% endblock %}
