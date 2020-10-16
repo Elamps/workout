@@ -2,9 +2,11 @@
 ### A simple motivational app to make you go do stuff.
 
 ---
-[Open MYM](https://salty-coast-15461.herokuapp.com/)
+[Open DIWO](https://diwo2d.herokuapp.com/)
 
-For all those individuals who would like to sell their goods in a more friendly environement here is Meet Your Maker. Logging into Meet Your Maker allows the choice of buying, selling, or browsing local goods and services. Login to browse stores and products. Then alert the seller of desire to purchase the goods from the site via a built-in mailer. Users can review stores and leave feedback for other potential customers. Makers can create their store and upload images for their storefront as well as their products. All users can view and add calendar events to emphasize community-driven events.
+# Getting Started
+
+This is a simple application to help motivate you to get out there and make more than just minimal motions. Once you sign up for the app, you will see if you have worked out today. If you have not worked out today you will be prompted to add an exeise for the day. If you have exercised the app will congratulate you! Simply use this app as your homepage and always feel guilted into being more active.   
 
 ## Contents
 * Objective
@@ -15,7 +17,6 @@ For all those individuals who would like to sell their goods in a more friendly 
 * Screenshots
 * Stretch Goals
 * Technologies Implemented
-* Credits
 
 ### Objective
 To facilitate creaters and harvesters to sell to their neighbors on an ongoing basis without the hassels of bigger marketplace websites.
@@ -43,81 +44,55 @@ Team member Karen and her husband are urban farmers and creaters and dislike the
 ## ERD and Wireframes
 
 #### ERD
-![Current ERD](public/images/Current ERD.png)
+![Current ERD](/images/Current_ERD.png)
 
 ---
 
 #### WireFrame
-[Link](https://share.proto.io/LMSOX5/)
  
-![Image](public/images/WFSS1.png)
+![Image](/images/wireframe.png)
+
 
 ---
 
-![Image](public/images/WFSS2.png)
-
-
-
 ### Trello Board
-[Open Trello](https://trello.com/b/8J1SKHlY/meet-your-maker)
+[Open Trello](https://trello.com/b/0tL4DdQn/did-i-work-out)
 
 ---
 
 ## User Stories
-Karen and Mike sell eggs and honey. They don't like facebook but it's the only way to the their neighbors know when new harvests are in. They would love an app that would allow them a little home to display their wares and respond to buyer inquiries.
- 
- Jane is laid off from her job due to Covid19. She bakes cakes and cookies and could sell them for extra money. She needs a platform to let people in her area know of her new goods and chat with her about orders. She would like to have a page of her own to show her unique style.
- 
-Megan has missed being able to sell her jewelry at local markets. Her hobby of making jewelry is an easy source of extra income, but she needs a place to sell her goods as they get lost in the bigger sites. She would like to stand out more than in a larger nationwide store.
+Brett wants to check his phone and be reminded to work out, so as user he wants to be able to see if he has worked out today.
+
+Nadia wants to remind Brett to work out, so she will log her workouts and force her boyfriend to work out with her or else his app shames him.
+
+James as a user wants to log in and check how often he works out, so he will log his exercisses and look back at all previous workouts. 
 
 ---
 
 ## Screenshots
-![Home Screen](public/images/HomeScreenshot.png)
+![1](/images/Sshot1.png)
 ---
-![All Makers](public/images/Store_List.png)
+![2](/images/Sshot2.png)
 ---
-![Maker Store Items](public/images/Maker_Store.png)
+![3](/images/Sshot3.png)
 
 ---
 
 ## Stretch Goals/ What Comes Next
-- [ ] Implement other locations to match makers/buyers
-- [x] Give cities/towns the ability to integrate Makers Markets/Farmers Markets to the calendar
-- [ ] Give Makers the ability to review buyers as well
-- [ ] Stripe API for payments
-- [ ] Have buyers add themselves to wait list for out of stock items
+- [ ] Calorie / Weight tracker
+- [ ] Users can share workouts
+- [ ] Users can compare workouts with each other
 
 ---
 
 ## Technologies Used
-- Javascript
+
 - Html
 - CSS
-- NodeJS
-- ExpressJS
-- Express Generator
-- MongoDB
-- MongooseJS
-- MongoDB Atlas
-- React
-- AWS-SDK
-- Multer3
-- SemanticUI
-- Nodemailer
-- Full Calendar React
-- Postman API Development
-- JWT OAuth
-- Proto.io
-- Powtoon
+- PosgreSQL
+- Python3
+- Django
+- Heroku
+- Materialize
 - Git
 
-## Photo Credits
-Landing Page Photos
-
-* Koombucha picture from holyfamily.com
-* Jelly picture from B&S Pepper Company, Atlanta
-
----
-
-[Open MYM](https://salty-coast-15461.herokuapp.com/)
