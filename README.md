@@ -29,22 +29,16 @@ Team member Karen and her husband are urban farmers and creaters and dislike the
 ---
 
 ## Minimum Viable Product
-* AAU I should be able to register for an account.
-* AAU I should be able to login/out
-* AAU I should be able to add local events to a calendar
-* As a seller I should be able to list prodcuts/quantities for sale.
-* As a seller I should be able to post pictures of my products.
-* As a buyer I should be able to see sellers/items for sale in the Atlanta area.
-* As a buyer I should be able to contact the seller with order and return contact information
-* As a buyer I shoud have a simple review form for the seller/store
-* As a buyer when I click on an item I want to purchase, I should see a form to message the seller.
+* AAU I should be able to see if I worked out today
+* AAU I should be able to view all my previously logged workouts
+* AAU I should be able to change/delete old workouts
 
 ---
 
 ## ERD and Wireframes
 
 #### ERD
-![Current ERD](/images/Current_ERD.png)
+![Current ERD](/images/erd_now.png)
 
 ---
 
